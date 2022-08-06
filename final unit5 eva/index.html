@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+#container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 40%;
+    margin-top: 100px;
+}
+
+#container input{
+    width: 200px;
+}
+
+#container select{
+    width: 200px;
+}
+
+#submitBtn{
+    width: 100px;
+}
+
+#Navbar{
+    display: flex;
+    height: 80px;
+    background-color: rgb(132, 132, 164);
+    border-radius: 15px;
+    justify-content: space-between;
+
+    justify-content:space-around;
+}
+
+#Navbar div{
+    padding-top: 20px;
+}
+
+</style>
+<body>
+
+    <div id="Navbar">
+        <div><a href="">News App</a></div>
+        <div><a href="">Sign up</a></div>
+        <div><a href="http://127.0.0.1:5500/worldNews.html">World News</a></div>
+    </div>
+    
+
+<div id="container">
+
+<input type="text" placeholder="Enter profile image url" id="url">
+<input type="text" placeholder="Name" id="name">
+<input type="email" placeholder="Email" id="email">
+<select id="countries">
+    <option>India</option>
+    <option>China</option>
+    <option>Usa</option>
+    <option>New zealand</option>
+
+</select>
+<button id="submitBtn">S U B M I T</button>
+
+
+
+</div>
+
+
+
+
+</body>
+
+<script>
+
+
+document.getElementById("submitBtn").addEventListener("click", storedetails)
+
+
+function storedetails(){
+
+let user = {}
+
+let url = document.getElementById("url").value
+let name = document.getElementById("name").value
+let email = document.getElementById("email").value
+let country = document.getElementById("countries").value
+
+
+user.url = url
+user.name = name
+user.email = email
+user.country = country
+
+localStorage.setItem("userDetails", JSON.stringify(user))
+
+console.log(user)
+
+window.location.href = "http://127.0.0.1:5500/worldNews.html";
+}
+
+
+
+
+</script>
+
+</html>

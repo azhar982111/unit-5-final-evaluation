@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #navar {
+        display: flex;
+        background-color: rgb(194, 137, 137);
+        /* border-radius: 15px; */
+        /* justify-content: space-around; */
+        height: 60px;
+    }
+
+    #left {
+        width: 30%;
+        /* border: 1px solid black; */
+        margin-left: 20px;
+        padding-top: 18px;
+    }
+
+    #right {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 350px;
+        /* border: 1px solid black; */
+    }
+
+    #right div {
+        padding-top: 18px;
+    }
+
+    #sidebar {
+        width: 210px;
+        height: 800px;
+        /* border: 1px solid black; */
+        background-color: aquamarine;
+        justify-content: center;
+    }
+
+    #profilepic {
+        height: 120px;
+        margin-top: 100px;
+    }
+
+    #bottom{
+        display: flex;
+    }
+
+    #rightDiv{
+       
+        width: 80%;
+    }
+
+    #cardDiv{
+        border: 1px solid black;
+        display: flex;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    #dataImages{
+        height: 80px;
+    }
+</style>
+
+<body>
+
+
+
+    <div id="navar">
+
+        <div id="left">
+            <input type="text">
+        </div>
+
+        <div id="right">
+
+            <div onclick="getData('India')"><a href="http://127.0.0.1:5500/worldNews.html">India</a></div>
+            <div onclick="getData('Usa')"><a onclick="getData('Usa')" href="http://127.0.0.1:5500/worldNews.html">USA</a></div>
+            <div onclick="getData('China')"><a href="http://127.0.0.1:5500/worldNews.html">China</a></div>
+            <div onclick="getData('UK')"><a href="http://127.0.0.1:5500/worldNews.html">UK</a></div>
+            <div onclick="getData('New zealand')"><a href="http://127.0.0.1:5500/worldNews.html">New zealand</a></div>
+
+        </div>
+
+    </div>
+
+    <div id="bottom">
+
+        <div id="sidebar">
+
+
+
+        </div>
+
+        <div id="rightDiv">
+
+        </div>
+
+    </div>
+
+
+</body>
+
+<script src="./worldnews.js">
+
+</script>
+
+</html>
